@@ -1,0 +1,411 @@
+:root {
+  /* Backgrounds */
+  --bg-main: linear-gradient(180deg, #0F172A, #101C2E);
+  --bg-hero: linear-gradient(135deg, #1E2D44, #1A3A52, #163B3F);
+  --bg-card: linear-gradient(145deg, #1A263A, #162235);
+
+  /* Text */
+  --text-primary: #E5EDF3;
+  --text-secondary: #9FB3C8;
+  --text-muted: #7A8FA6;
+
+  /* HTML — orange */
+  --html-accent: #F4A261;
+  --html-hover:  #E38B4F;
+
+  /* CSS — blue */
+  --css-accent:  #5FA8D3;
+  --css-hover:   #4A96C4;
+
+  /* JavaScript — yellow-green (muted) */
+  --js-accent:   #D9C75B;
+  --js-hover:    #C9B847;
+
+  /* Utility */
+  --card-radius: 20px;
+  --transition-fast: 0.25s ease;
+}
+/* Make sure Font Awesome is loaded in <head> */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+/* Base ul styling */
+#redes {
+  list-style: none;
+  display: flex;
+  gap: 1rem;      /* spacing between each link */
+  padding-left: 0;
+  justify-content: center; /* center horizontally */
+  align-items: center;
+  flex-wrap: wrap; /* prevents overflow on small screens */
+}
+
+/* Base link styling */
+#redes a.social {
+  display: inline-flex;      /* allows icon + text alignment */
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+#redes a.social:hover {
+  color: var(--html-accent); /* or any accent you like */
+  transform: scale(1.05);
+}
+
+/* Base icon styling via ::before */
+.social::before {
+  display: inline-block;
+  margin-right: 0.5rem;      /* spacing from text */
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+/* Behance */
+.behance::before {
+  content: "\f1b4";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+/* CodePen */
+.codepen::before {
+  content: "\f1cb";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+/* GitHub */
+.github::before {
+  content: "\f09b";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+/* LinkedIn */
+.linkedin::before {
+  content: "\f08c";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+/* Email */
+.email::before {
+  content: "\f0e0";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+
+
+@keyframes glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px 2px white;
+  }
+
+  50% {
+    box-shadow: 0 0 25px 10px white;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(244, 162, 97, 0.1), transparent 60%);
+  pointer-events: none;
+  /* so it doesn’t block clicks */
+}
+
+body {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #0F172A, #101C2E);
+  color: #E5EDF3;
+
+}
+
+
+/*----------------------CABECERA-------------------------*/
+
+.perfilFotoTexto {
+  display: flex;
+  align-items: center;
+
+  gap: 3rem;
+  padding: 4rem 3rem;
+  max-width: 1200px;
+  margin: auto;
+  background: var(--bg-card);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-bottom: var(--orange-accent);
+
+}
+
+.pfpcontainer {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 1px white;
+  animation: glow 5s infinite alternate;
+  aspect-ratio: 1 / 1;
+}
+
+.spaghetticontainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.spaghetti {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  /* name → text → button */
+  gap: 1rem;
+  padding-left: 20px;
+  flex: 1;
+}
+
+.texto button {
+  align-self: center;
+  /* centers ONLY the button */
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .perfilFotoTexto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto button {
+    align-self: center;
+  }
+}
+
+button {
+  background: var(--orange-accent);
+  color: #0F172A;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 162, 97, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.texto h1 {
+  margin: 0;
+
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #E5EDF3;
+  font-family: 'Courier New', monospace;
+}
+
+a {
+  color: inherit;      /* Use the parent text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Optional: smooth hover */
+}
+
+#redes {
+  display: flex;
+  justify-content: center;
+}
+
+#redes img {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+.texto h2 {
+  margin-top: 1rem;
+  max-width: 600px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #9FB3C8;
+
+}
+
+.texto h1::first-letter {
+  color: var(--orange-accent);
+  font-size: larger;
+}
+
+
+/*----------------------FIN CABECERA-------------------------*/
+
+
+/*----------------------CUERPO, LISTA DE EJERCICIOS-------------------------*/
+
+
+section {
+  padding: 2rem 10%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+  font-size: 35px;
+}
+
+ul.lista li {
+	flex: 1 1 0;
+
+	padding: 10px;
+	border-radius: 20px;
+	border: solid 2px var(--c1);
+	box-shadow: 3px 4px 8px grey;
+	transition:0.3s;
+}
+
+ul.lista li span{
+	color:var(--c1);
+	border:solid 1px var(--c1);
+	padding: 4px;
+	font-family:monospace;
+	border-radius:10px;
+	display:inline-block;
+	transition:0.3s;
+}
+
+ul.lista li img{
+	width:100%;
+	max-height:120px;
+	object-fit:cover;
+	border-radius:10px;
+	transition:0.3s;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+ul.lista li:hover{
+background-color:var(--c1);
+	
+	h3{
+		color:var(--cl);
+	}
+	
+	span{
+		background:#FFFFFFBB
+	}
+	.btn{
+		outline:white solid 1px;
+	}
+		scale:1.06;
+	
+}
+
+ul#html li{
+  background: var(--html-accent);
+  color:black;
+}
+
+ul#html li:hover{
+  background: var(--html-hover);
+  color:black;
+}
+
+ul#css li{
+  background: var(--css-accent);
+  color:black;
+}
+
+ul#css li:hover{
+  background: var(--css-hover);
+  color:black;
+}
+
+ul#js li{
+  background: var(--js-accent);
+  color:black;
+
+}
+
+ul#js li:hover{
+  background: var(--js-hover);
+}
+
+
+.separador {
+  width: 100%;
+  max-width: 1400px;
+  height: 5px;
+  margin: 2rem auto;
+  border-radius: 3px;
+  background: linear-gradient(to right, var(--html-accent), var(--html-hover));
+  box-shadow: 0 0 15px rgba(244, 162, 97, 0.4);
+}
+
+/*--------------FOOTER--------------*/
+.site-footer {
+  background: var(--bg-card);
+  /* Dark card-style background */
+  color: var(--text-muted);
+  /* Soft text for subtlety */
+  text-align: center;
+  padding: 2rem 10%;
+  margin-top: 4rem;
+  border-top: 2px solid var(--orange-accent);
+  /* Thin orange line for accent */
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0 0 1rem 0;
+}
+
+.site-footer .footer-links a {
+  color: var(--orange-accent);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: var(--orange-hover);
+  transform: translateY(-2px);
+}
