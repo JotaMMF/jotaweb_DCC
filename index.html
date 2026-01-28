@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Jota</title>
+</head>
+
+<body onload="randomize()">
+
+  <header>
+
+    <!---------CABECERA (FOTO PERFIL, NOMBRE, DESCRIPCIÓN)-------------------->
+    <div class="perfilFotoTexto">
+
+      <div class="pfpcontainer">
+        <div class="spaghetticontainer">
+          <img class="spaghetti" id="avatar"
+            src="https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg" alt="">
+
+        </div>
+      </div>
+      <div class="texto">
+        <a href="https://codepen.io/jotaDCC">
+          <h1 id="nombre">José María</h1>
+          
+        </a>
+        <p id="nick"></p>
+        <p id="descripcion">
+        <h2>Estudiante de Desarrollo Web en Gijón enfocado en el stack frontend. Esta es mi lista de ejercicios.</h2>
+        </p>
+        <ul id="redes">
+			<a href="https://www.behance.net/username" class="social behance">Behance</a>
+<a href="https://codepen.io/username" class="social codepen">CodePen</a>
+<a href="https://linkedin.com/in/username" class="social linkedin">LinkedIn</a>
+
+		</ul>
+        <!--<button id="btnRandom">Randomizar</button>-->
+      </div>
+    </div>
+  </header>
+
+<!-------------------- FIN CABECERA -------------------->
+
+  <div class="separador"></div>
+
+<!---------EJERCICIOS (LISTA DE EJERCICIOS)-------------------->
+
+  <main>
+    <section id="ejercicios">
+
+      <h3>Mis Ejercicios</h3>
+
+      <div>
+
+        <!--EJERCICIOS HTML-->
+
+        <section id="ejHTML">
+          <ul id="html" class="lista">
+
+          </ul>
+        </section>
+        
+        <!--EJERCICIOS CSS-->
+        <section id="ejCSS">
+          <ul id="css" class="lista">
+
+          </ul>
+
+        </section>
+
+        <!--EJERCICIOS JS-->
+        <section id="ejJS">
+          <ul id="js" class="lista">
+
+          </ul>
+        </section>
+      </div>
+    </section>
+
+<!---------FIN EJERCICIOS (LISTA DE EJERCICIOS)-------------------->
+
+  </main>
+
+
+<!------------FOOTER (COPYRIGHT, REDES)-------------------->
+  <footer class="site-footer">
+    <p>&copy; 2026 José Manuel. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:josemanuelcursillos@gmail.com" target="_blank">Email</a>
+      <a href="https://github.com/JotaMMF" target="_blank">GitHub</a>
+      <a href="https://codepen.io/jotaDCC" target="_blank">CodePen</a>
+    </div>
+  </footer>
+
+<!------------FIN FOOTER (COPYRIGHT, REDES)-------------------->
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
