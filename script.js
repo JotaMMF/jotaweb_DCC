@@ -2,7 +2,7 @@
 
 
 
-const names = ["José Manuel", "José María", "Jesus Manuel", "Jean Bonbon", "Manuel José", "José Juan", "Juan José", "José Javier", "Javier María", "Jooooooseee Maaaaaanueeeel", "Jota", "Miguel Estéban", "José Teekis"];
+const names = ["José Manuel", "José María", "Jesus Manuel", "Jean Bonbon", "Manuel José", "José Juan", "Juan José", "José Javier", "Javier María", "Jooooooseee Maaaaaanueeeel", "Jota", "Miguel Esteban", "José Teekis"];
 const avatarList = ["https://w0.peakpx.com/wallpaper/546/904/HD-wallpaper-spaghetti-cheese-pasta-food.jpg", "https://upload.wikimedia.org/wikipedia/commons/3/3a/Mentha_piperita_-_Flickr_-_aspidoscelis_%281%29.jpg"];
 const btnRandom = document.getElementById("btnRandom");
 let randomName=names[Math.floor(Math.random() * names.length)];
