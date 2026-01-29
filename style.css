@@ -203,7 +203,13 @@ body {
   }
 }
 
-
+.botones {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical alignment */
+  gap: 1rem;               /* space between buttons */
+  margin: 2rem 0;
+}
 
 button {
   background: var(--css-hover);
