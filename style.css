@@ -250,7 +250,7 @@ a {
   padding: 10px;
 }
 
-.texto h2 {
+.texto h2, #nick, #descripcion {
   margin-top: 1rem;
   max-width: 600px;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
