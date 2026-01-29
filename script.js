@@ -49,6 +49,11 @@ function randomize() {
 
 ];*/
 
+
+//----------------
+//https://www.w3schools.com/howto/howto_js_filter_elements.asp
+//----------------
+
 const portfolioJoseM = {
   alumno: {
     nombre: randomName,
@@ -155,9 +160,6 @@ const portfolioJoseM = {
     }
   ]
 };
-
-
-
 
 function cargar(datos){
 	//DATOS ALUMNO

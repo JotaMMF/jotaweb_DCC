@@ -203,8 +203,10 @@ body {
   }
 }
 
+
+
 button {
-  background: var(--orange-accent);
+  background: var(--css-hover);
   color: #0F172A;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -216,12 +218,42 @@ button {
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(244, 162, 97, 0.4);
+  background: var(--css-accent);
+  
 }
 
 button:active {
   transform: translateY(0);
 }
+
+#btnhtml{
+  background: var(--html-hover);
+}
+
+#btnhtml:hover{
+  background: var(--html-accent);
+  box-shadow: 0 6px 20px var(--html-accent);
+}
+
+#btncss{
+  background: var(--css-hover);
+}
+
+#btncss:hover{
+  background: var(--css-accent);
+  box-shadow: 0 6px 20px var(--css-accent);
+}
+
+#btnjs{
+  background: var(--js-hover);
+}
+
+#btnjs:hover{
+  background: var(--js-accent);
+  box-shadow: 0 6px 20px var(--js-accent);
+}
+
+
 
 .texto h1 {
   margin: 0;

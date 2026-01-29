@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,33 +27,38 @@
       <div class="texto">
         <a href="https://codepen.io/jotaDCC">
           <h1 id="nombre">José María</h1>
-          
+
         </a>
         <p id="nick"></p>
         <p id="descripcion">
-        <h2>Soy un estudiante de Desarrollo Web en Gijón enfocado en el stack frontend. Esta es mi lista de ejercicios.</h2>
+        <h2>Soy un estudiante de Desarrollo Web en Gijón enfocado en el stack frontend. Esta es mi lista de ejercicios.
+        </h2>
         </p>
         <ul id="redes">
-			<a href="https://www.behance.net/username" class="social behance">Behance</a>
-<a href="https://codepen.io/username" class="social codepen">CodePen</a>
-<a href="https://linkedin.com/in/username" class="social linkedin">LinkedIn</a>
+          <a href="https://www.behance.net/username" class="social behance">Behance</a>
+          <a href="https://codepen.io/username" class="social codepen">CodePen</a>
+          <a href="https://linkedin.com/in/username" class="social linkedin">LinkedIn</a>
 
-		</ul>
+        </ul>
         <!--<button id="btnRandom">Randomizar</button>-->
       </div>
     </div>
   </header>
 
-<!-------------------- FIN CABECERA -------------------->
+  <!-------------------- FIN CABECERA -------------------->
 
   <div class="separador"></div>
 
-<!---------EJERCICIOS (LISTA DE EJERCICIOS)-------------------->
+  <!---------EJERCICIOS (LISTA DE EJERCICIOS)-------------------->
 
   <main>
     <section id="ejercicios">
 
       <h3>Mis Ejercicios</h3>
+
+      <button id="btnhtml" class="btnnavActivo" onclick="cambiarTab('html')">HTML</button>
+      <button id="btncss" class="btnnavActivo" onclick="cambiarTab('css')">CSS</button>
+      <button id="btnjs" class="btnnavActivo" onclick="cambiarTab('javascript')">JS</button>
 
       <div>
 
@@ -66,7 +69,7 @@
 
           </ul>
         </section>
-        
+
         <!--EJERCICIOS CSS-->
         <section id="ejCSS">
           <ul id="css" class="lista">
@@ -84,12 +87,12 @@
       </div>
     </section>
 
-<!---------FIN EJERCICIOS (LISTA DE EJERCICIOS)-------------------->
+    <!---------FIN EJERCICIOS (LISTA DE EJERCICIOS)-------------------->
 
   </main>
 
 
-<!------------FOOTER (COPYRIGHT, REDES)-------------------->
+  <!------------FOOTER (COPYRIGHT, REDES)-------------------->
   <footer class="site-footer">
     <p>&copy; 2026 José Manuel. All rights reserved.</p>
     <div class="footer-links">
@@ -99,11 +102,10 @@
     </div>
   </footer>
 
-<!------------FIN FOOTER (COPYRIGHT, REDES)-------------------->
+  <!------------FIN FOOTER (COPYRIGHT, REDES)-------------------->
 
 
   <script src="script.js"></script>
 </body>
 
 </html>
-
